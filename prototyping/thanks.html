@@ -1,12 +1,290 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/master.css" media="screen" title="no title" charset="utf-8">
-    <title>Thanks for Attending: Right-Sizing your Rapid Prototypes for Web &amp; Mobile</title>
-  </head>
-  <body>
-    <h1>Thanks for Attending!</h1>
-    <h2>Right-Sizing your Rapid Prototypes for Web &amp; Mobile</h2>
-  </body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+/* --- @font-face --- */
+
+/* --- black --- */
+
+@font-face {
+	font-family: brandon-grotesque;
+	src: url("../fonts/brandon_blk-webfont.woff") format("woff"),
+	url("../fonts/brandon_blk-webfont.woff2") format("woff2");
+	font-style: normal;
+	font-weight: 900;
+	}
+
+/* --- html5 elements --- */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+	}
+
+/* --- normalize / reset(s) --- */
+
+html {
+	font: 100%/1 sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	}
+
+body {
+	margin: 0;
+	}
+
+body,
+figure {
+	margin: 0;
+	}
+
+a {
+	text-decoration: none;
+	}
+
+abbr,
+a img {
+	border: 0;
+	}
+
+address {
+  font-style: normal;
+  }
+
+blockquote,
+dd {
+	margin-left: 0;
+	}
+
+dl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+menu,
+ol,
+ul,
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+	}
+
+ol,
+ul {
+	padding-left: 0;
+	}
+
+img {
+	display: inline-block;
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	}
+
+/* --- custom --- */
+
+:root {
+  --font-scale: calc(100% + .25vw);
+}
+
+@media only screen and (min-width: 36em) {
+
+  html {
+    font-size: 106.25%; /* fallback */
+    font-size: var(--font-scale);
+  }
+
+}
+
+@media only screen and (min-width: 48em) {
+
+  html {
+    font-size: 112.5%; /* fallback */
+    font-size: var(--font-scale);
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  html {
+    font-size: 118.75%; /* fallback */
+    font-size: var(--font-scale);
+  }
+
+}
+
+
+body {
+  width: 90%;
+  max-width: 40em;
+  margin: 0 auto;
+  }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  margin: -1px;
+}
+
+a {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Droid Sans", sans-serif;
+  color: #f8971d;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+}
+
+::selection {
+  background: #ebebeb;
+  }
+
+.gym-link {
+  font-weight: bold;
+  }
+
+#banner {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+
+#banner h1 {
+  position: relative;
+  left: -5%;
+  width: 110%;
+  font: 900 2.2em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, Arial, "Droid Sans", sans-serif;
+  color: #5ca5a0;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  order: 2;
+}
+
+#banner h2,
+#banner h3 {
+  font: 900 1.1em/1.2 brandon-grotesque, "Helvetica Neue", Helvetica, Arial, "Droid Sans", sans-serif;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  word-spacing: .1em;
+  order: 1;
+}
+
+.live-event {
+  display: inline-block;
+  color: #222;
+  background: #f8971d;
+  padding: 1em 1.2em;
+  border-top: .125em dashed transparent;
+  border-radius: 2px;
+  margin: 5% 0 1em;
+}
+
+.all-caps {
+  text-transform: uppercase;
+  }
+
+main p {
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, "Droid Sans", sans-serif;
+  color: #222;
+  margin: .85em 0;
+  }
+
+.text-center {
+  text-align: center;
+  }
+
+#signature h4 {
+  font: bold 1em/1.5 "Helvetica Neue", Helvetica, Arial, "Droid Sans", sans-serif;
+  color: #222;
+  margin-bottom: 1em;
+  }
+
+#signature address {
+  margin: 1.5em 0;
+  }
+
+#signature img {
+  margin-bottom: 1em;
+  }
+
+@media only screen and (min-width: 20em) {
+
+#banner {
+  max-width: 28em;
+  margin: auto;
+  }
+
+.br {
+  display: block;
+}
+
+.nowrap {
+  white-space: nowrap;
+  }
+
+main {
+  max-width: 28em;
+  margin: auto;
+  }
+
+}
+
+</style>
+
+  <title>Thank You / UX Slide Live Event / Gymnasium</title>
+  <meta name="description" content="Right-Sizing your Rapid Prototypes for Web & Mobile">
+  <meta name="author" content="Gymnasium (Aquent Gymnasium)">
+  <!--[if IE]>
+    <script src="js/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+<header id="banner" role="banner">
+  <h3><span class="live-event">Thanks for Attending</span></h3>
+  <h1><span class="br">Right-Sizing</span> your Rapid Prototypes for <span class="nowrap">Web & Mobile</span></h1>
+  <h2 class="visually-hidden"><span class="live-event all-caps">Live Event</span></h2>
+</header>
+
+<main role="main">
+  <p>We hope you found this event informative. We’ll send you a link to the recording as soon as it is available.</p>
+  <p>In the meantime, if you want to up your prototyping game, check out our new, free Gym Short (one of our short courses), <a class="gym-link" href="http://bit.ly/GYM_AXURE"><cite title="Advanced Rapid Prototyping with Axure">Advanced Rapid Prototyping with Axure</cite></a>.</p>
+  <p class="text-center"><i>Until next time,</i></p>
+  <section id="signature">
+    <h4 class="text-center">The Gymnasium Team</h4>
+    <address class="text-center">
+    <dl>
+      <dt><dfn><img alt="Gymnasium" srcset="../img/gym-logo-gray-orange.svg" src="../img/gym-logo-gray-orange.png" width="210"></dfn></dt>
+      <dd><a rel="author" title="Gymnasium home page" href="https://thegymnasium.com">thegymnasium.com</a></dd>
+    </dl>
+    </address>
+  </section>
+</main>
+
+</body>
 </html>
